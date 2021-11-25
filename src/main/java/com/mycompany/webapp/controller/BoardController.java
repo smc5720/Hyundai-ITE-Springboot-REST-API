@@ -83,7 +83,7 @@ public class BoardController {
 			board.setBattachsname(new Date().getTime() + "-" + mf.getOriginalFilename());
 			board.setBattachtype(mf.getContentType());
 			try {
-				File file = new File("C:/hyundai_it&e/upload_files/" + board.getBattachsname());
+				File file = new File("C:/hyundai_ite/upload_files/" + board.getBattachsname());
 				mf.transferTo(file);
 			} catch (Exception e) {
 			}
@@ -106,7 +106,7 @@ public class BoardController {
 			board.setBattachsname(new Date().getTime() + "-" + mf.getOriginalFilename());
 			board.setBattachtype(mf.getContentType());
 			try {
-				File file = new File("C:/hyundai_it&e/upload_files/" + board.getBattachsname());
+				File file = new File("C:/hyundai_ite/upload_files/" + board.getBattachsname());
 				mf.transferTo(file);
 			} catch (Exception e) {
 			}
@@ -147,7 +147,7 @@ public class BoardController {
 			response.setHeader("Content-Disposition", "attachment; filename=\"" + battachoname + "\";");
 			response.setContentType(battachtype);
 
-			InputStream is = new FileInputStream("C:/hyundai_it&e/upload_files/" + battachsname);
+			InputStream is = new FileInputStream("C:/hyundai_ite/upload_files/" + battachsname);
 			OutputStream os = response.getOutputStream();
 			FileCopyUtils.copy(is, os);
 			is.close();
